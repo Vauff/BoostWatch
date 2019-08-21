@@ -9,7 +9,7 @@ public Plugin myinfo =
 	name = "Boost Watch",
 	author = "Vauff",
 	description = "Sends a warning message to admins when a suspected zombie boost takes place",
-	version = "1.2",
+	version = "1.2.1",
 	url = "https://github.com/Vauff/BoostWatch"
 };
 
@@ -88,6 +88,7 @@ public int ZR_OnClientInfected(int client, int attacker, bool motherInfect, bool
 				}
 
 				PrintToChat(c, " \x02[Boost Watch] \x05%s \x04[#%i] \x07infected people after being boosted by \x05%s \x04[#%i]", boostedName, boostedID, boosterName, boosterID);
+				LogMessage("%s[#%i][%s] infected people after being boosted by %s[#%i][%s]", boostedName, boostedID, boostedSteamID, boosterName, boosterID, boosterSteamID);
 				PrintToConsole(c, "-------------------------- [Boost Watch] --------------------------");
 				PrintToConsole(c, "%s[#%i][%s] infected people after being boosted by %s[#%i][%s]", boostedName, boostedID, boostedSteamID, boosterName, boosterID, boosterSteamID);
 				PrintToConsole(c, "-------------------------------------------------------------------");
